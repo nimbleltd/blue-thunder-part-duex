@@ -59,6 +59,13 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: Freight;
+	src: url("../fonts/Freight-Italic.eot");
+	src: url("../fonts/Freight-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Freight-Italic.woff") format("woff"), url("../fonts/Freight-Italic.ttf") format("truetype"), url("../fonts/Freight-Italic.svg#Freight") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
 	font-family: icomoon;
 	src: url("../fonts/icomoon.eot");
 	src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
@@ -84,7 +91,7 @@
 	bottom: 0;
 	width: 100%;
 	position: absolute;
-	padding: 13px 0 30px;
+	padding: 13px 0 20px;
 	color: #fff;
 	background: #6e7882;
 }
@@ -172,6 +179,9 @@
 	max-width: inherit;
 	height: auto;
 	display: block;
+}
+#showStep2 {
+	display: none;
 }
 html.resize-active *, html.resize-active *:before, html.resize-active *:after {
 	-webkit-transition: none !important;
@@ -346,7 +356,7 @@ p {
 
 @media (min-width: 768px) {
 .form-group {
-	margin: 0 0 15px;
+	margin: 0 0 7px;
 }
 }
 .form-group.w-small {
@@ -726,6 +736,8 @@ blockquote cite a:hover {
 	line-height: 30px;
 	font-weight: 400;
 	padding: 30px 0 0;
+	font-family: "Freight";
+	font-weight: 300;
 	margin: 0;
 }
 
