@@ -1,0 +1,62 @@
+
+// header
+#header {
+	padding: 10px 15px;
+	background: $cyan;
+	position: relative;
+	z-index: 99;
+	@extend %clearfix;
+
+	@include media('>=tablet') {
+		padding: 25px 15px;
+
+		.home & {
+			width: 100%;
+			padding: 21px 0 21px 40px;
+			background: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	@include media('>=desktop') {
+		padding: 34px 40px 30px;
+	}
+	&:before {
+		@include pseudo-elements(0);
+		position: fixed;
+		background: rgba(0,0,0,0.5);
+		z-index: 100;
+		transition: all 0.3s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+
+		.nav-active & {
+			visibility: visible;
+			opacity: 1;
+		}
+		@include media('>=tablet') {
+			display: none;
+		}
+	}
+	.logo {
+		width: 180px;
+		float: left;
+		margin: 5px 10px 0 0;
+
+		@include media('>=tablet') {
+			width: 200px;
+
+			.home & {
+				display: none;
+			}
+		}
+		@include media('>=desktop') {
+			width: 222px;
+			margin: 0 20px 0 0;
+		}
+		img {
+			@include img-full-width;
+		}
+	}
+}
