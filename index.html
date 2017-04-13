@@ -46,7 +46,42 @@
 						<strong class="title">CALL NOW 800-940-3002</strong>
 						<span class="sub-title">OR START HERE TO GET GREAT RATES</span>
 					</div>
-					<div class="text-holder">
+
+
+					<div id="ShowStep2" class="text-holder">
+						<div class="form-group">
+							<strong class="label">Date Of Birth</strong>
+						    <input type="DOB" class="form-control" id="DOB" placeholder="12/17/1975">
+						</div>
+						<div class="dropdown">
+							<strong class="label">Gender</strong>
+						    <a href="#" data-toggle="dropdown" class="dropdown-toggle">$500,000</a>
+						    <ul class="dropdown-menu">
+						        <li><a href="#">Male</a></li>
+						        <li><a href="#">Female</a></li>
+						    </ul>
+						</div>
+						<div class="form-group">
+							<strong class="label">First Name</strong>
+						    <input type="firstname" class="form-control" id="firstname" placeholder="Joe">
+						</div>
+						<div class="form-group">
+							<strong class="label">Last Name</strong>
+						    <input type="lastname" class="form-control" id="lastname" placeholder="Smith">
+						</div>
+						<div class="form-group">
+							<strong class="label">Phone Number</strong>
+						    <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="555-555-5555">
+						</div>
+						<div class="form-group">
+							<strong class="label">Email Address</strong>
+						    <input type="emailAddress" class="form-control" id="emailAddress" placeholder="email@email.com">
+						</div>
+  				</div>
+
+
+
+					<div id="hideStep1" class="text-holder">
 						<div class="dropdown">
 							<strong class="label">Coverage amount</strong>
 						    <a href="#" data-toggle="dropdown" class="dropdown-toggle">$500,000</a>
@@ -71,7 +106,7 @@
 						        <li><a href="#">Tennessee</a></li>
 						    </ul>
 						</div>
-						<a href="#" class="btn btn-danger btn-lg">start here</a>
+						<a href="#" onclick="hideStep1ShowStep2()" class="btn btn-danger btn-lg">start here</a>
 					</div>
 				</div>
 
@@ -96,5 +131,13 @@
 			</section>
 		</footer>
 	</div>
+	<script type="text/javascript">
+		function hideStep1ShowStep2() {
+			var steps = document.getElementById('hideStep1');
+			if (steps.style.display != 'none') {
+				steps.style.display = 'none';
+			}
+		}
+	</script>
 </body>
 </html>

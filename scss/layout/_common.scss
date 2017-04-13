@@ -155,7 +155,7 @@ p {
 	position: relative;
 
 	@include media('>=tablet') {
-		margin: 0 0 43px;
+		margin: 0 0 8px;
 	}
 	&.w-small {
 		max-width: 66.6%;
