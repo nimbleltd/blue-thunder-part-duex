@@ -77,7 +77,7 @@
 							<strong class="label">Email Address</strong>
 						    <input type="emailAddress" class="form-control" id="emailAddress" placeholder="email@email.com">
 						</div>
-						<a href="#" onclick="#" class="btn btn-danger btn-lg">get a quote</a>
+						<a href="#" class="btn btn-danger btn-lg">get a quote</a>
   				</div>
 
 
@@ -136,11 +136,21 @@
 		function hideStep1ShowStep2() {
 			var step1 = document.getElementById('hideStep1');
 			var step2 = document.getElementById('showStep2');
-			var raiseBox = document.getElementById('raiseBox')
+			var raiseBox = document.getElementById('raiseBox');
+			var shrinkLabelMargin = document.getElementsByClassName('label');
 			if (step1.style.display != 'none') {
 				step1.style.display = 'none';
 				step2.style.display = 'block';
 				raiseBox.style.margin = '0 0 0 7px';
+				console.log(shrinkLabelMargin);
+				// console.log("yo = " + shrinkLabelMargin.style.margin)
+				var i;
+				for (i = 0; i < shrinkLabelMargin.length; i++) {
+					console.log(shrinkLabelMargin[i])
+    			shrinkLabelMargin[i].style.margin = "0 0 0";
+				}
+
+
 			}
 		}
 	</script>
